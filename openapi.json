@@ -1,0 +1,38 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "VAN Simple Time API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://van.pcgamingspotsite.workers.dev"
+    }
+  ],
+  "paths": {
+    "/time": {
+      "get": {
+        "summary": "Get current time in Manila",
+        "operationId": "getCurrentTime",
+        "responses": {
+          "200": {
+            "description": "Current date and time in Asia/Manila",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "datetime": {
+                      "type": "string",
+                      "description": "Current date and time in Manila"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
